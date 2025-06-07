@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(211, 211, 211);
+}
+.heading{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+    margin:10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.body {
+    margin: 0;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(211, 211, 211, 0.384);
+}
+
+#Calculator {
+    width: 500px;
+    height: 700px;
+    background-color: lightgrey;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+}
+
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    text-decoration: solid black 2px;
+    border: none;
+    background-color: rgb(223, 223, 223);
+    color: black;
+}
+#display:focus {
+    outline: none;
+}
+
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: darkgrey;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+button:active {
+    background-color: black;
+    color: white;
+}
+
+.operator-btn{
+    background-color: rgb(221, 149, 41);
+}
+
+.operator-btn:hover {
+    background-color: rgb(238, 151, 51);
+    color: wheat; 
+}
+
+.operator-btn:active {
+    background-color: rgb(255, 255, 255);
+    color: wheat; 
+}
+
+/* Adding Responsive Design for Mobile, Laptop and big monitors */
+@media (max-width: 480px) {
+    #Calculator {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    button {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    #display {
+        font-size: 3rem;
+    }
+    .heading{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    #Calculator {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+    button {
+        width: 90px;
+        height: 90px;
+        font-size: 2.8rem;
+    }
+    #display {
+        font-size: 4rem;
+    }
+}
+@media screen and (min-width: 1025px) {
+    #Calculator {
+        width: 500px;
+        height: 700px;
+        padding: 20px;
+    }
+    button {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+    #display {
+        font-size: 5rem;
+    }
+    
+}
